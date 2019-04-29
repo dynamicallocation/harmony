@@ -36,14 +36,16 @@
       <div>
           <!--observes this.fire from 'processor'   processor.lastFreq -->
           <br/>
-          <h2>(Frequency)</h2>
+          
           <p id = "Frequency">Text element</p>
+          <canvas id="myBar" class="soundBar" width="500" height="100"></canvas>
           <br />
-          <h3>(Nearest Note)</h3>
+          <h3>Note</h3>
           <p id = "Note">Text element</p>
           <br/>
           <h3>(Cents Away)</h3>  
-          <p id = "Cents"></p>      
+          <p id = "Cents"></p>  
+          <button name="resume" id="resumeBTN">Resume</button>    
       </div>
       <script type="text/javascript">
         const processor = new AudioProcessor();
@@ -61,10 +63,29 @@
         function Main(){
           var d = new Date();
           processor.dispatchAudioData(d.getTime());
-          document.getElementById("Frequency").innerHTML = proxied.lastFreq + "hz";
-          document.getElementById("Note").innerHTML = noteNumbers[proxied.lastNote] + (proxied.lastOctave);
+          //document.getElementById("Frequency").innerHTML = proxied.lastFreq + "hz";
+          document.getElementById("Frequency").innerHTML = "Target: 401hz Actual: 420hz"
+          //document.getElementById("Note").innerHTML = noteNumbers[proxied.lastNote] + (proxied.lastOctave);
+          document.getElementById("Note").innerHTML = "A2"
           document.getElementById("Cents").innerHTML = proxied.centsAway + "cts";
         }
+        var canvas = document.getElementById("myBar")
+        canvas.style.border = "none"
+        var width = canvas.width;
+        var c = canvas.getContext("2d"); 
+        var x = 250
+        var y = 1;
+          animate()
+          function animate() {
+          requestAnimationFrame(animate);
+            c.clearRect(0,0,innerWidth,innerHeight);
+            c.rect(0,10,500,50);
+            c.stroke();
+            c.rect(250,10,5,50);
+            c.stroke()
+            c.fillRect(270,10,5,50);
+             x += y
+          }
       </script>
     </main>
   </body>

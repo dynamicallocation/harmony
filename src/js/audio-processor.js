@@ -301,7 +301,16 @@ class AudioProcessor {
       this.lastOctave = octave;
       this.lastNote = note;
       //this.fire('audio-data', { frequency, octave, note });
-    }
+
+     
+
+        document.getElementById("resumeBTN").addEventListener('click',() =>
+        {
+          context.resumeAudio().then(() => {
+            console.log("audio successfully resumed")});
+        })
+    }  
+
   }
   
   new AudioProcessor();
