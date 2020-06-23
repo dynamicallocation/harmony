@@ -1,43 +1,46 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Welcome to Harmony</title>
+    <title>Eric Hoffman | Home</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="../../assets/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../assets/scss/style.css"/>
     <link href="https://fonts.googleapis.com/css?family=Overpass|Roboto" rel="stylesheet">
-
-    <!-- favicon code -->
-    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/fav/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/fav/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/fav/favicon-16x16.png">
-    <link rel="manifest" href="../../assets/fav/site.webmanifest">
-    <link rel="mask-icon" href="../../assets/fav/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <!-- jQuery file hosted by Google -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="../js/effects.js"></script>
+    <script src="../js/main.js"></script>
   </head>
-  <body id="welcome" class="fadein">
-    <main>
-        <div id="mp3_player">
-            <div id="audio_box"></div>
-            <canvas id="analyser_render"></canvas>
-        </div>
-        
-        <div class="big-title-container">
-            <img src="../../assets/img/harmony-logo-full.png" alt="logo" id="welcome-logo">
-            <hr class="sm-hr">
-            <h1>Guitar tuning made easy.</h1>
-        </div>
 
-        <div class="bottom-container">
-            <a href="interactive-tuner.html" class="button welcome-button">INTERACTIVE TUNER</a>
-            <a href="tune-by-ear.html" class="button welcome-button">TUNE BY EAR</a>
+  <body id="home-bg" class="fadein">
+    <header class="home-nav">
+      <div class="container">
+          <nav>
+              <ul class="h-box-right">
+                <li><a href="index.html" class="menu-item-black"><h3>Home</h3></a></li>
+                <li><a href="about.html" class="menu-item-black"><h3>About</h3></a></li>
+                <li><a href="projects.html" class="menu-item-black"><h3>Projects</h3></a></li>
+              </ul>
+          </nav>
+      </div>
+    </header>
+    <main>
+      <div id="welcome">
+          <h1 id="title"><b>Eric Hoffman</b></h1>
+          <h2 id="subtitle">Front-End Developer • Software Engineer • Designer</h2>
+          <a href="projects.html" class="button" id="connect-button"><h3>View My Work</h3></a>
         </div>
     </main>
-
-    <script src="../js/wave.js"></script>
+    <footer class="home-nav">
+      <div class="container">
+          <nav>
+              <ul class="f-box-left">
+                <li><a href="https://github.com/ehoffman5" target="_blank" class="menu-item-black"><i class="fab fa-github fa-2x"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/1eric-hoffman/" target="_blank" class="menu-item-black"><i class="fab fa-linkedin fa-2x"></i></a></li>
+                <li><a href="../assets/pdf/Eric-Hoffman-Resume.pdf" target="_blank" class="menu-item-black"><h3><i class="fas fa-file-alt fa-lg"></i></a></li>
+                <li><a href="mailto:1eric.inquiries@gmail.com" class="menu-item-black"><h3><i class="fas fa-envelope fa-lg"></i></a></li>
+              </ul>
+          </nav>
+      </div>
+    </footer>
   </body>
 </html>
